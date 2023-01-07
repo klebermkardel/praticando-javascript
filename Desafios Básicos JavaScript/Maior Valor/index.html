@@ -5,15 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/CSS/style.css">
-    <title>Desafios Básicos JS - Calculando Média Final de Notas</title>
+    <title>Desafios Básicos JS - Encontrando Maior Valor</title>
 </head>
 <body>
     <div class="container">
         <div class="box">
             <h1 class="title">Desafios Básicos JS</h1>
             <h2 class="challenge">Encontrar Maior Valor</h2>
-            <p class="description">Escreva um programa para ler e mostrar 2 valores no console (considere que não serão 
-            informados valores iguais) e escreva no console o maior valor deles</p>
+            <p class="description">Escreva um programa para ler e mostrar 2 valores (considere que não serão 
+            informados valores iguais) e informe o maior valor deles</p>
+            <label>Informe o primeiro valor:</label>
+            <input class="valor" type="number" name="txtv1" id="txtv1">
+            <label>Informe o segundo valor:</label> 
+            <input class="valor" type="number" name="txtv2" id="txtv2">
+            <input id="btn" type="button" value="Verificar" onclick="verificar()">
+            <div id="res"></div>
         </div>
     </div>
 

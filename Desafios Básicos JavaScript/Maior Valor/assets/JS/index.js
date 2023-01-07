@@ -1,24 +1,21 @@
-/* Escreva um programa para ler 2 valores (considere que não serão 
-informados valores iguais) e escrever o maior valor deles
-
-*/
+/* Escreva um programa para ler e mostrar 2 valores (considere que não serão 
+informados valores iguais) e informe o maior valor deles */
 
 // Código:
 
-const v1 = 5
-const v2 = 5
+function verificar() {
+        var txtv1 = document.getElementById('txtv1')
+        var txtv2 = document.getElementById('txtv2')
+        var res = document.getElementById('res')
+        var v1 = Number(txtv1.value)
+        var v2 = Number(txtv2.value)
+        
+        if (v1 > v2) {
+            res.innerHTML = `Primeiro valor: ${v1} <br/> Segundo valor: ${v2} <br/> 
+            Maior valor: ${v1}`    
+        } else {
+                res.innerHTML = `Primeiro valor: ${v1} <br/> Segundo valor: ${v2} <br/> 
+                Maior valor: ${v2}`
+        }
 
-console.log("Valor 1: " + v1)
-console.log("Valor 2: " + v2)
-
-if(v1 > v2) {
-    console.log("Maior Valor: " + v1)
-} else if (v1 === v2) {
-    console.log("Por favor, informe dois valores diferentes")
-} else {
-    console.log("Maior valor: " + v2)
 }
-
-
-
-
