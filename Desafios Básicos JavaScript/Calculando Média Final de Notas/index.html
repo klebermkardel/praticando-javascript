@@ -12,8 +12,23 @@
         <div class="box">
             <h1 class="title">Desafios Básicos JS</h1>
             <h2 class="challenge">Calculando Média Final do Aluno</h2>
-            <p class="description">Dado as quatro notas finais do aluno no ano, calcule a média final e imprima no console as notas e a média final e verifique se o mesmo foi aprovado, ficou de recuperação ou foi reprovado <br><br> 01 - Se média for menor que 5, aluno reprovado. <br> 02 - Se média for entre 5 e 6, aluno em recuperação. <br> 03 - Se média for maior que 7, aluno aprovado. </p>
+            <p class="description">Dado as quatro notas finais do aluno no ano, calcule a média final e informe sua média e sua situação.<br><br>
+                
+                01 - Se média for menor que 5, aluno reprovado. <br>
+                02 - Se média for entre 5 e 7, aluno em recuperação. <br>
+                03 - Se média for maior ou igual que 7, aluno aprovado.</p>
+            <label>Nota 1:</label>
+            <input type="number" name="txtn1" id="txtn1" class="nota">
+            <label>Nota 2:</label>
+            <input type="number" name="txtn2" id="txtn2" class="nota">
+            <label>Nota 3:</label>
+            <input type="number" name="txtn3" id="txtn3" class="nota">
+            <label>Nota 4:</label>
+            <input type="number" name="txtn4" id="txtn4" class="nota">
+            <input type="button" id="btn" value="Calcular" onclick="calcular()">
+            <div id="situacao"></div>
         </div>
+
     </div>
 
     <script src="assets/JS/index.js"></script>
