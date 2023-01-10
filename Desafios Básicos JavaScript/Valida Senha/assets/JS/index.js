@@ -10,14 +10,17 @@ ACESSO	NEGADO	caso	a	senha	seja	inválida.
 
 // Código:
 
-const senha = 1234
+function validar() {
+    var senha = document.getElementById('senha')
+    var msg = document.getElementById('msg')
 
-console.log("Sua senha é: " + senha)
-
-if(senha === 1234) {
-    console.log("ACESSO PERMITIDO")
-} else {
-    console.log("ACESSO NEGADO")
+    if(senha.value.length < 8) {
+        msg.style.color = '#990000'
+        msg.innerHTML = `ACESSO NEGADO! Verifique o tamanho da senha (min: 8 caractéres)`
+    } else {
+        msg.style.color = '#009900'
+        msg.innerHTML = `ACESSO PERMITIDO!`
+    }
 }
 
 
