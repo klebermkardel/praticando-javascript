@@ -6,23 +6,25 @@ o mês em	que	ela	nasceu).
 
 // Código:
 
-const anoAtual = 2022
-const anoDeNascimento = 1953
-const idade = anoAtual - anoDeNascimento
-
-
-console.log("Ano de Nascimento: " + anoDeNascimento)
-console.log(idade)
-
-
-if(idade >= 18 && idade < 70) {
-    console.log("O seu voto é obrigatório este ano")
-} else if (idade >= 16 && idade < 18 || idade >= 70) {
-    console.log("O seu voto é opcional este ano")
+function verificar() {
+    var txtano = document.getElementById('txtano')
+    var situacao = document.getElementById('situacao')
+    var data = new Date()
+    var nasc = Number(txtano.value)
+    var anoAtual = data.getFullYear()
+    var idade = anoAtual - nasc
+    
+    if (idade < 16) {
+        situacao.innerHTML = `Você nasceu em ${nasc}, tem ${idade} anos e ainda não pode votar`
+    } else if (idade < 18 || idade >= 65) {
+        situacao.innerHTML = `Você nasceu em ${nasc}, tem ${idade} anos e o seu voto é opcional`
+    } else {
+        situacao.innerHTML = `Você nasceu em ${nasc}, tem ${idade} anos e o seu voto é obrigatório`
+    }
 }
- else {
-    console.log("Você ainda não pode votar este ano")
-}
+
+
+
 
 
 
