@@ -6,22 +6,22 @@ que leia o número de maçãs compradas, calcule e escreva o valor total da comp
 
 // Código:
 
-const quantidade  = 20
+function calcular() {
+    let txtqtd = document.getElementById('txtqtd')
+    let comprou = document.getElementById('comprou')
+    let valor = document.getElementById('valor')
+    let qtd = Number(txtqtd.value)
+    let valorUnidade = 0.30
+    let valorAcima12 = 0.25
 
-if(quantidade < 12) {
-    let preco = 0.30
-
-    let valorTotal = preco * quantidade
-
-    console.log("Quantidade: " + quantidade)
-    console.log("Valor Total: " + valorTotal)
-} else {
-    preco = 0.25
-    valorTotal = preco * quantidade
-
-    console.log("Quantidade: " + quantidade)
-    console.log("Valor Total: " + valorTotal)
+    if(qtd < 12) {
+        let preco = qtd * valorUnidade
+        comprou.innerHTML = `<strong>Quantidade: </strong> ${qtd}`
+        valor.innerHTML = `<strong>Valor: </strong> ${preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`
+    } else {
+        let preco = qtd * valorAcima12
+        comprou.innerHTML = `<strong>Quantidade: </strong> ${qtd}`
+        valor.innerHTML = `<strong>Valor: </strong> ${preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`
+    }
 }
-
-
 
